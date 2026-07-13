@@ -1,13 +1,3 @@
-import subprocess
-import sys
-
-# Force install setuptools at runtime if it's missing
-try:
-    import pkg_resources
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "setuptools"])
-    import pkg_resources
-
 # Import python packages
 import streamlit as st
 import os
