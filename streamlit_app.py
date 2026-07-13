@@ -1,3 +1,17 @@
+import sys
+import subprocess
+import os
+
+# 1. Force install setuptools and refresh the environment
+try:
+    import pkg_resources
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "setuptools"])
+    import importlib
+    importlib.invalidate_caches()
+    # This line is the "magic" that makes Python see the new library
+    import pkg_resources
+
 # Import python packages
 import streamlit as st
 import os
