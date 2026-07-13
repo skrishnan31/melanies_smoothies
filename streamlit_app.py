@@ -1,6 +1,14 @@
 import sys
 import subprocess
 import os
+# Import python packages
+import streamlit as st
+import os
+from snowflake.snowpark.functions import col
+import requests  
+
+st.write("### Diagnostic Info")
+st.write(f"Files in this folder: {os.listdir('.')}")
 
 # 1. Force install setuptools and refresh the environment
 try:
@@ -11,12 +19,6 @@ except ImportError:
     importlib.invalidate_caches()
     # This line is the "magic" that makes Python see the new library
     import pkg_resources
-
-# Import python packages
-import streamlit as st
-import os
-from snowflake.snowpark.functions import col
-import requests  
 
 # Write directly to the app
 st.title(":cup_with_straw: Customize Your Smoothie :cup_with_straw:")
