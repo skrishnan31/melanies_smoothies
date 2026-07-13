@@ -18,9 +18,6 @@ import os
 from snowflake.snowpark.functions import col
 import requests  
 
-st.write("### Diagnostic Info")
-st.write(f"Files in this folder: {os.listdir('.')}")
-
 # Write directly to the app
 st.title(":cup_with_straw: Customize Your Smoothie :cup_with_straw:")
 st.write(
